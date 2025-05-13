@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "id": "b22a",
+      "username": "dina",
+      "email": "dina123@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "payments": []
+}

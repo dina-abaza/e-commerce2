@@ -1,0 +1,62 @@
+import React ,{ useState } from "react";
+import { FaEye, FaHeart, FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { Products } from "../../products";
+import useCartStore from "../../store/cartStore";
+import useFavoritesStore from "../../store/favStore";
+
+export default function ProductFilter() {
+  const [category, setCategory] = useState("all");
+  const addToCart  =useCartStore((state)=>state.addToCart);
+  const addToFavorites=useFavoritesStore((state)=>state.addToFavorites)
+  
+  const filteredProducts =
+    category === "all"
+      ? Products
+      : Products.filter((product) => product.category === category);
+
+  return (
+    <div className="flex flex-col gap-y-10">
+      <div className="mb-4 flex gap-4 justify-center items-center">
+        <button onClick={() => setCategory("all")} className="bg-blue-500 text-white hover:bg-blue-400 ">All</button>
+        <button onClick={() => setCategory("electronics")} className="bg-blue-500 text-white hover:bg-blue-400 ">Electronics</button>
+        <button onClick={() => setCategory("Women")} className="bg-blue-500 text-white hover:bg-blue-400 "> Women</button>
+        <button onClick={() => setCategory("Men")} className="bg-blue-500 text-white hover:bg-blue-400">Men</button>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 py-10">
+  <div className="flex flex-wrap gap-24">
+    {filteredProducts.map((product) => (
+      <div
+        key={product.id}
+        className="bg-white rounded shadow-md flex flex-col gap-y-5 items-center justify-center hover:scale-125 transform duration-500"
+      >
+        <img
+          src={product.img}
+          alt={product.title}
+          className="w-full h-40 object-contain mb-4"
+        />
+        <h2 className="font-bold text-lg mb-1">{product.title}</h2>
+        <span className="text-green-600 font-semibold mb-2">${product.price}</span>
+        <div className="flex gap-8">
+            <button className="cursor-pointer  text-white bg-green-400 hover:scale-125 transition duration-500">
+           <Link to={`/ProductDetail/${product.id}`}><FaEye  /></Link> 
+            </button>
+            
+            <button onClick={()=>addToFavorites(product)} className="cursor-pointer  text-white bg-red-600 hover:scale-125 transition duration-500">
+                <FaHeart/>
+            </button>
+          
+          <button onClick={()=> addToCart(product)}  className="cursor-pointer  text-white bg-blue-500 hover:scale-125 transition duration-500">
+          <FaShoppingCart />
+
+          </button>
+        </div>
+      </div>
+    ))}
+  </div>
+  </div>
+ 
+    </div>
+  );
+}
