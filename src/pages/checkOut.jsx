@@ -57,9 +57,9 @@ export default function CheckOut() {
     <div className="max-w-4xl mx-auto mt-20 p-6 bg-gray-100 rounded shadow-lg">
       <h2 className="text-2xl font-bold mb-6 text-center">Checkout</h2>
 
-      <div className="flex justify-between mb-6">
+      <div className="flex flex-col md:flex-row justify-between mb-6">
         
-        <div className="w-1/2 p-4 bg-white rounded shadow-sm">
+        <div className="w-full md:w-1/2 p-4 bg-white rounded shadow-sm">
           <h3 className="text-lg font-semibold mb-4 text-cyan-500">Order Summary</h3>
           {cart.map((item) => (
             <div key={item.id} className="mb-2">
@@ -72,7 +72,7 @@ export default function CheckOut() {
         </div>
 
         
-        <form onSubmit={handlePayment} className="w-1/2 p-4 bg-white rounded shadow-sm">
+        <form onSubmit={handlePayment} className="w-full md:w-1/2 p-4 bg-white rounded shadow-sm">
           <h3 className="text-lg font-semibold mb-4 text-cyan-500">Payment Information</h3>
 
           <label className=" font-bold block mb-2 ">

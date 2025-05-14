@@ -9,7 +9,7 @@ export default function Information(){
           <h2 className="text-3xl font-semibold text-gray-800">Why ShopEase?</h2>
         </div>
 
-        <div className="flex justify-center items-center gap-6 pb-16">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6 pb-16">
           <div className=" bg-white rounded shadow-2xl p-6 text-center">
             <h3 className="text-xl font-bold mb-2">High Quality</h3>
             <p>Sourced from top manufacturers for the best quality.</p>
