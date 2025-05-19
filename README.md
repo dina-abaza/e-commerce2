@@ -1,12 +1,41 @@
 # React + Vite
+# 🛒 React E-Commerce App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive and dynamic e-commerce website built with **React** and **Zustand** for global state management.
 
-Currently, two official plugins are available:
+The application allows users to:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse products by category
+- View product details
+- Add items to cart
+- Manage cart state globally
+- Navigate smoothly between pages
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Tech Stack
+
+- ⚛️ **React** – Frontend framework
+- ⚙️ **Zustand** – Lightweight state management
+- 💨 **Tailwind CSS** – Utility-first CSS framework
+- 🔀 **React Router** – Routing between pages
+- 🗂️ (Optional: `Fake API` or local JSON for mock data)
+
+---
+
+## 📸 Features
+
+- 🛍️ Product listing page
+- 🔍 Product detail view
+- 🛒 Add to cart / remove from cart
+- 🧠 Cart state stored globally via Zustand
+- 🌐 Multi-page navigation
+- 📱 Responsive design for mobile/tablet/desktop
+
+---
+
+## 📁 Project Structure
+
+
+
+
