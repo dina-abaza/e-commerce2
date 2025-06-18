@@ -10,9 +10,9 @@ import About from './pages/about';
 import Contact from './pages/contact';
 import Register from './pages/register';
 import Login from './pages/login';
-import Cart from './pages/cartitems';
+import Cart from 'pages/cartItems';
 import Favorites from './pages/favorites';
-import CheckOut from './pages/checkOut';
+import CheckOut from 'pages/checkOut';
 
 function App() {
   
