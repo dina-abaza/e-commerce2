@@ -5,7 +5,7 @@ import Nav from './components/navbar';
 import Footer from './components/footer';
 import Home from './pages/home';
 import ProductDetail from './store/productDetail';
-import OurProducts from './pages/ourproducts';
+import OurProducts from './pages/ourProducts';
 import About from './pages/about';
 import Contact from './pages/contact';
 import Register from './pages/register';
