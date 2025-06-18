@@ -24,21 +24,21 @@ export default function ProductFilter() {
         <button onClick={() => setCategory("Men")} className="bg-blue-500 text-white hover:bg-blue-400">Men</button>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-10">
-  <div className="flex flex-wrap gap-24">
+      <div className="max-w-7xl mx-auto">
+  <div className="flex flex-wrap justify-center gap-y-10 gap-x-8 ">
     {filteredProducts.map((product) => (
       <div
         key={product.id}
-        className="bg-white rounded shadow-md flex flex-col gap-y-5 items-center justify-center hover:scale-125 transform duration-500"
+        className="bg-white rounded shadow-md flex flex-col  items-center justify-center hover:scale-125 transform duration-500"
       >
         <img
           src={product.img}
           alt={product.title}
           className="w-full h-40 object-contain mb-4"
         />
-        <h2 className="font-bold text-lg mb-1">{product.title}</h2>
-        <span className="text-green-600 font-semibold mb-2">${product.price}</span>
-        <div className="flex gap-8">
+        <h2 className="font-bold text-lg ">{product.title}</h2>
+        <span className="text-green-600 font-semibold ">${product.price}</span>
+        <div className="flex gap-2 mb-2 mt-2">
             <button className="cursor-pointer  text-white bg-green-400 hover:scale-125 transition duration-500">
            <Link to={`/ProductDetail/${product.id}`}><FaEye  /></Link> 
             </button>

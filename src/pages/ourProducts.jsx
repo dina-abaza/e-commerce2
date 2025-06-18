@@ -26,7 +26,7 @@ export default function OurProducts() {
       />
 
 
-      <div className="flex flex-wrap justify-center items-center gap-10 max-w-6xl">
+      <div className="flex flex-wrap justify-center items-center gap-4 max-w-6xl">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <div
@@ -45,7 +45,7 @@ export default function OurProducts() {
                   {product.price}
                 </span>
 
-                <div className="flex justify-center items-center gap-4 mt-4">
+                <div className="flex justify-center items-center gap-2 mt-4">
                   <Link to={`/ProductDetail/${product.id}`}>
                     <button className="p-2 rounded-full text-white bg-green-400 hover:scale-125 transition duration-300">
                       <FaEye />
