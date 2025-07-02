@@ -5,7 +5,7 @@ export default function Header() {
     <div className="w-full min-h-screen p-8">
     
       <div
-        className="w-full h-[500px] bg-cover bg-center flex items-center justify-center relative"
+        className="w-full h-[690px] sm:h-[500px] bg-cover bg-center flex items-center justify-center relative"
         style={{
           backgroundImage: "url('/shop.jpg')",
         }}
@@ -19,7 +19,7 @@ export default function Header() {
         ></div>
 
       
-        <div className="text-center text-white px-4 mt-12 absolute">
+        <div className="text-center text-white px-4 mt-8 absolute">
           <h1 className="text-4xl font-bold mb-4">Welcome to ShopEase</h1>
           <p className="text-xl">Quality shopping made simple and affordable.</p>
         </div>
