@@ -6,7 +6,7 @@ import { FaEnvelope } from "react-icons/fa";
 export default function Contact(){
     return(
 
-        <div className="mt-20">   
+        <div className="mt-24">   
             
     <div>
         <h2 className="text-4xl font-bold text-center text-blue-700 mb-4">Get in Touch</h2>

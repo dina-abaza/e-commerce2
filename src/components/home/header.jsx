@@ -2,10 +2,10 @@ import React from "react";
 
 export default function Header() {
   return (
-    <div className="w-full min-h-screen p-8">
+    <div className="w-full min-h-screen">
     
       <div
-        className="w-full h-[690px] sm:h-[500px] bg-cover bg-center flex items-center justify-center relative"
+        className="w-full h-[690px]  bg-cover bg-center flex items-center justify-center relative"
         style={{
           backgroundImage: "url('/shop.jpg')",
         }}

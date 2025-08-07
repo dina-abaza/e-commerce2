@@ -17,7 +17,7 @@ export default function ProductFilter() {
 
   return (
     <div className="flex flex-col gap-y-10">
-      <div className="flex flex-col md:flex-row mb-4 gap-4 justify-center items-center">
+      <div className="flex flex-col md:flex-row mb-6 gap-4 justify-center items-center">
         <button onClick={() => setCategory("all")} className="bg-blue-500 text-white hover:bg-blue-400 ">All</button>
         <button onClick={() => setCategory("electronics")} className="bg-blue-500 text-white hover:bg-blue-400 ">Electronics</button>
         <button onClick={() => setCategory("Women")} className="bg-blue-500 text-white hover:bg-blue-400 "> Women</button>
@@ -29,7 +29,7 @@ export default function ProductFilter() {
     {filteredProducts.map((product) => (
       <div
         key={product.id}
-        className="bg-white rounded shadow-md flex flex-col  items-center justify-center hover:scale-125 transform duration-500"
+        className="bg-white rounded p-4 shadow-md flex flex-col  items-center justify-center hover:scale-125 transform duration-500"
       >
         <img
           src={product.img}
