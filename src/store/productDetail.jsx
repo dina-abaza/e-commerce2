@@ -29,10 +29,12 @@ const ProductDetail = () => {
       <p className="text-lg text-gray-600 mb-2">Category: {product.category}</p>
       <p className="text-lg font-semibold text-gray-800">{product.price}</p>
       <p className="mt-4 text-gray-700">{product.description}</p>
-      <div className="flex gap-10"> 
+
+       <div className="flex flex-col sm:flex-row gap-4 sm:gap-10 w-full justify-center items-center mt-6">
+
         <button className="flex gap-2 rounded p-2 bg-green-500 hover:bg-green-300 hover:scale-110 transform duration-500">
-  <FaShoppingCart />
-  add to cart
+          <FaShoppingCart />
+            add to cart
         </button>
         <button className="rounded p-2 bg-yellow-500 hover:bg-amber-300 hover:scale-110 transform duration-500">
           <Link to={'/'}>back to products</Link>

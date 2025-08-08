@@ -13,7 +13,8 @@ import Login from './pages/login';
 import Cart from './pages/cartItems';
 import Favorites from './pages/favorites';
 import CheckOut from './pages/checkOut';
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   
   return (
@@ -33,6 +34,7 @@ function App() {
       <Route path='/checkout' element={<CheckOut/>}/>
     </Routes>
     <Footer/>
+    <ToastContainer />
   </div>
   </>
   

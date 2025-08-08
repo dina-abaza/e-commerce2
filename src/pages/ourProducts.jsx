@@ -1,14 +1,32 @@
-import React ,{ useState } from "react";
+import React, { useState } from "react";
 import { Products } from "../products";
 import { Link } from "react-router-dom";
 import { FaEye, FaHeart, FaShoppingCart } from "react-icons/fa";
 import useCartStore from "../store/cartStore";
 import useFavoritesStore from "../store/favStore";
+import { toast } from "react-toastify"; // ✅ استدعاء التوست
 
 export default function OurProducts() {
   const [search, setSearch] = useState("");
-  const addToCart=useCartStore((state)=>state.addToCart);
-  const addToFavorites=useFavoritesStore((state)=>state.addToFavorites);
+  const addToCart = useCartStore((state) => state.addToCart);
+  const addToFavorites = useFavoritesStore((state) => state.addToFavorites);
+
+  // ✅ دوال التوست
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    toast.success("✅ تمت الإضافة إلى السلة", {
+      position: "top-right",
+      autoClose: 2000,
+    });
+  };
+
+  const handleAddToFavorites = (product) => {
+    addToFavorites(product);
+    toast.success("❤️ تمت الإضافة إلى المفضلة", {
+      position: "top-right",
+      autoClose: 2000,
+    });
+  };
 
   const filteredProducts = Products.filter((product) =>
     product.title.toLowerCase().includes(search.toLowerCase())
@@ -16,7 +34,6 @@ export default function OurProducts() {
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center bg-gray-100 gap-y-10 mt-20 ">
-    
       <input
         type="text"
         placeholder="ابحث عن منتج..."
@@ -24,7 +41,6 @@ export default function OurProducts() {
         onChange={(e) => setSearch(e.target.value)}
         className="w-full max-w-md mb-10 p-2 mt-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
-
 
       <div className="flex flex-wrap justify-center items-center gap-4 max-w-6xl">
         {filteredProducts.length > 0 ? (
@@ -52,11 +68,17 @@ export default function OurProducts() {
                     </button>
                   </Link>
 
-                  <button onClick={()=>addToFavorites(product)} className="p-2 rounded-full text-white bg-red-600 hover:scale-125 transition duration-300">
+                  <button
+                    onClick={() => handleAddToFavorites(product)}
+                    className="p-2 rounded-full text-white bg-red-600 hover:scale-125 transition duration-300"
+                  >
                     <FaHeart />
                   </button>
 
-                  <button onClick={()=>addToCart(product)} className="p-2 rounded-full text-white bg-blue-500 hover:scale-125 transition duration-300">
+                  <button
+                    onClick={() => handleAddToCart(product)}
+                    className="p-2 rounded-full text-white bg-blue-500 hover:scale-125 transition duration-300"
+                  >
                     <FaShoppingCart />
                   </button>
                 </div>
